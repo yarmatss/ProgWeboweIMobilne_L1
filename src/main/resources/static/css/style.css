@@ -1,0 +1,110 @@
+/* Resetowanie stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stylizowanie ciała dokumentu */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Styl dla nagłówków */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Styl dla formularzy */
+form {
+    max-width: 400px; /* Maksymalna szerokość formularza */
+    margin: 0 auto; /* Wyśrodkowanie formularza */
+    background-color: white; /* Tło formularza */
+    padding: 20px; /* Padding wewnętrzny formularza */
+    border-radius: 8px; /* Zaokrąglone rogi */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Cień formularza */
+}
+
+/* Styl dla etykiet */
+label {
+    display: block; /* Etykieta na nowej linii */
+    margin-bottom: 5px; /* Odstęp pod etykietą */
+    font-weight: bold; /* Pogrubiona czcionka */
+}
+
+/* Styl dla pól formularza */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Szerokość 100% */
+    padding: 10px; /* Padding wewnętrzny */
+    margin-bottom: 20px; /* Odstęp pod polem */
+    border: 1px solid #ccc; /* Szary border */
+    border-radius: 4px; /* Zaokrąglone rogi */
+}
+
+/* Styl dla przycisku */
+button {
+    background-color: #3498db; /* Kolor tła */
+    color: white; /* Kolor tekstu */
+    padding: 10px 15px; /* Padding */
+    border: none; /* Bez borderu */
+    border-radius: 4px; /* Zaokrąglone rogi */
+    cursor: pointer; /* Wskaźnik kursora */
+    font-size: 16px; /* Rozmiar czcionki */
+    width: 100%; /* Szerokość 100% */
+}
+
+/* Styl dla przycisku przy najeździe */
+button:hover {
+    background-color: #2980b9; /* Ciemniejszy kolor przy najeździe */
+}
+
+/* Styl dla komunikatów o błędach */
+.error {
+    color: red; /* Kolor tekstu dla błędów */
+    font-size: 14px; /* Rozmiar czcionki */
+    margin-top: -15px; /* Odstęp nad błędem */
+    margin-bottom: 15px; /* Odstęp pod błędem */
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}

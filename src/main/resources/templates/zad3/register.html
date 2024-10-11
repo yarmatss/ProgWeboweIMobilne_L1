@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Rejestracja</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <script th:src="@{/js/validation.js}"></script>
+</head>
+<body>
+    <div th:replace="~{navbar.html}"></div>
+
+    <h1>Rejestracja użytkownika</h1>
+    <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+        <div>
+            <label for="name">Imię:</label>
+            <input type="text" id="name" th:field="*{name}" />
+            <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></div>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" th:field="*{email}" />
+            <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></div>
+        </div>
+
+        <div>
+            <label for="password">Hasło:</label>
+            <input type="password" id="password" th:field="*{password}" />
+            <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></div>
+        </div>
+
+        <input type="hidden" th:field="*{message}" value="Domyślna wiadomość" />
+
+        <button type="submit">Zarejestruj się</button>
+    </form>
+</body>
+</html>
